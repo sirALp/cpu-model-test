@@ -1,0 +1,413 @@
+JOB_AGENT SINGLE-STEP EXTRACTION BENCHMARK LOG
+Model: qwen3:1.7b
+Total tests: 49
+Timestamp: 2025-12-17T03:02:54.762330
+================================================================================
+
+=== T001 | OK | name plain: read1172 ===
+ttft=2.276s total=15.394s action=None
+Last question: What should I name this read_sql job?
+User answer:  read1172
+Current (before): {}
+Raw output: {"params": {"name": "read1172"}}
+Merged (after):  {"name": "read1172"}
+
+=== T002 | OK | name phrase: Let's call it read1172 ===
+ttft=0.587s total=11.458s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it read1172
+Current (before): {}
+Raw output: {"params": {"name": "read1172"}}
+Merged (after):  {"name": "read1172"}
+
+=== T003 | OK | name plain: job133 ===
+ttft=0.585s total=13.868s action=None
+Last question: What should I name this read_sql job?
+User answer:  job133
+Current (before): {}
+Raw output: {"params": {"name": "job133"}}
+Merged (after):  {"name": "job133"}
+
+=== T004 | OK | name phrase: Let's call it job133 ===
+ttft=0.619s total=13.786s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it job133
+Current (before): {}
+Raw output: {"params": {"name": "job133"}}
+Merged (after):  {"name": "job133"}
+
+=== T005 | OK | name plain: daily_orders ===
+ttft=0.615s total=17.089s action=None
+Last question: What should I name this read_sql job?
+User answer:  daily_orders
+Current (before): {}
+Raw output: {"params": {"name": "daily_orders"}}
+Merged (after):  {"name": "daily_orders"}
+
+=== T006 | OK | name phrase: Let's call it daily_orders ===
+ttft=0.620s total=16.580s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it daily_orders
+Current (before): {}
+Raw output: {"params": {"name": "daily_orders"}}
+Merged (after):  {"name": "daily_orders"}
+
+=== T007 | OK | name plain: report_balances ===
+ttft=0.623s total=12.516s action=None
+Last question: What should I name this read_sql job?
+User answer:  report_balances
+Current (before): {}
+Raw output: {"params": {"name": "report_balances"}}
+Merged (after):  {"name": "report_balances"}
+
+=== T008 | OK | name phrase: Let's call it report_balances ===
+ttft=0.611s total=14.341s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it report_balances
+Current (before): {}
+Raw output: {"params": {"name": "report_balances"}}
+Merged (after):  {"name": "report_balances"}
+
+=== T009 | OK | name plain: test_job ===
+ttft=0.646s total=10.955s action=None
+Last question: What should I name this read_sql job?
+User answer:  test_job
+Current (before): {}
+Raw output: {"params": {"name": "test_job"}}
+Merged (after):  {"name": "test_job"}
+
+=== T010 | OK | name phrase: Let's call it test_job ===
+ttft=0.615s total=8.431s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it test_job
+Current (before): {}
+Raw output: {"params": {"name": "test_job"}}
+Merged (after):  {"name": "test_job"}
+
+=== T011 | OK | name plain: nightly_etl ===
+ttft=0.625s total=16.715s action=None
+Last question: What should I name this read_sql job?
+User answer:  nightly_etl
+Current (before): {}
+Raw output: {"params": {"name": "nightly_etl", "table": "", "schemas": "", "connection": "", "drop_or_truncate": false, "to": "", "subject": "", "text": "", "cc": ""}}
+Merged (after):  {"name": "nightly_etl", "table": "", "schemas": "", "connection": "", "drop_or_truncate": false, "to": "", "subject": "", "text": "", "cc": ""}
+
+=== T012 | OK | name phrase: Let's call it nightly_etl ===
+ttft=0.603s total=10.875s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it nightly_etl
+Current (before): {}
+Raw output: {"params": {"name": "nightly_etl"}}
+Merged (after):  {"name": "nightly_etl"}
+
+=== T013 | OK | name plain: job99 ===
+ttft=0.601s total=14.156s action=None
+Last question: What should I name this read_sql job?
+User answer:  job99
+Current (before): {}
+Raw output: {"params": {"name": "job99"}}
+Merged (after):  {"name": "job99"}
+
+=== T014 | OK | name phrase: Let's call it job99 ===
+ttft=0.593s total=13.613s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it job99
+Current (before): {}
+Raw output: {"params": {"name": "job99"}}
+Merged (after):  {"name": "job99"}
+
+=== T015 | OK | name plain: rowsync ===
+ttft=0.608s total=13.238s action=None
+Last question: What should I name this read_sql job?
+User answer:  rowsync
+Current (before): {}
+Raw output: {"params": {"name": "rowsync"}}
+Merged (after):  {"name": "rowsync"}
+
+=== T016 | OK | name phrase: Let's call it rowsync ===
+ttft=0.646s total=8.826s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it rowsync
+Current (before): {}
+Raw output: {"params": {"name": "rowsync"}}
+Merged (after):  {"name": "rowsync"}
+
+=== T017 | OK | name plain: customer_audit ===
+ttft=0.657s total=10.554s action=None
+Last question: What should I name this read_sql job?
+User answer:  customer_audit
+Current (before): {}
+Raw output: {"params": {"name": "customer_audit"}}
+Merged (after):  {"name": "customer_audit"}
+
+=== T018 | OK | name phrase: Let's call it customer_audit ===
+ttft=0.714s total=9.598s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it customer_audit
+Current (before): {}
+Raw output: {"params": {"name": "customer_audit"}}
+Merged (after):  {"name": "customer_audit"}
+
+=== T019 | OK | name plain: clicks_agg ===
+ttft=0.678s total=14.155s action=None
+Last question: What should I name this read_sql job?
+User answer:  clicks_agg
+Current (before): {}
+Raw output: {"params": {"name": "clicks_agg"}}
+Merged (after):  {"name": "clicks_agg"}
+
+=== T020 | OK | name phrase: Let's call it clicks_agg ===
+ttft=0.698s total=13.473s action=None
+Last question: What should I name this read_sql job?
+User answer:  Let's call it clicks_agg
+Current (before): {}
+Raw output: {"params": {"name": "clicks_agg"}}
+Merged (after):  {"name": "clicks_agg"}
+
+=== T021 | OK | execute_query yes: yes ===
+ttft=0.735s total=14.264s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  yes
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": true}}
+Merged (after):  {"name": "job_exec_test", "execute_query": true}
+
+=== T022 | OK | execute_query yes: yeah, go ahead ===
+ttft=0.678s total=16.255s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  yeah, go ahead
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": true}}
+Merged (after):  {"name": "job_exec_test", "execute_query": true}
+
+=== T023 | OK | execute_query yes: sure, execute it ===
+ttft=0.649s total=16.446s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  sure, execute it
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": true}}
+Merged (after):  {"name": "job_exec_test", "execute_query": true}
+
+=== T024 | OK | execute_query yes: yep, run it and save ===
+ttft=0.644s total=10.126s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  yep, run it and save
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"execute_query": true}}
+Merged (after):  {"name": "job_exec_test", "execute_query": true}
+
+=== T025 | OK | execute_query yes: please do ===
+ttft=0.623s total=9.868s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  please do
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": true}}
+Merged (after):  {"name": "job_exec_test", "execute_query": true}
+
+=== T026 | OK | execute_query no: no ===
+ttft=0.673s total=12.312s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false}
+
+=== T027 | OK | execute_query no: no, just show me the results ===
+ttft=0.744s total=19.594s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no, just show me the results
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"execute_query": false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false}
+
+=== T028 | OK | execute_query no: no, don't execute ===
+ttft=0.717s total=17.288s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no, don't execute
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false}
+
+=== T029 | OK | execute_query no: nope, preview only ===
+ttft=0.732s total=14.121s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  nope, preview only
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false}
+
+=== T030 | OK | execute_query no: let's not run it ===
+ttft=0.728s total=15.540s action=None
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  let's not run it
+Current (before): {"name": "job_exec_test"}
+Raw output: {"params": {"name": "job_exec_test", "execute_query": false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false}
+
+=== T031 | OK | write_count yes: yes ===
+ttft=0.718s total=15.145s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  yes
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": true}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": true}
+
+=== T032 | OK | write_count yes: yes, track it ===
+ttft=0.678s total=15.584s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  yes, track it
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": true}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": true}
+
+=== T033 | OK | write_count yes: yeah, keep the row count ===
+ttft=0.681s total=10.215s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  yeah, keep the row count
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": true}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": true}
+
+=== T034 | OK | write_count yes: please track rows ===
+ttft=0.731s total=16.067s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  please track rows
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": true}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": true}
+
+=== T035 | OK | write_count yes: sure, count rows ===
+ttft=0.734s total=15.058s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  sure, count rows
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": true}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": true}
+
+=== T036 | OK | write_count no: no ===
+ttft=0.722s total=14.293s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  no
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": false}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": false}
+
+=== T037 | FAIL | write_count no: no, I don't need row count ===
+ttft=0.779s total=13.617s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  no, I don't need row count
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true}
+
+=== T038 | OK | write_count no: nope, skip row count ===
+ttft=0.683s total=15.347s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  nope, skip row count
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": false}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": false}
+
+=== T039 | OK | write_count no: don't track it ===
+ttft=0.672s total=33.395s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  don't track it
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": false}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": false}
+
+=== T040 | OK | write_count no: no, it's not necessary ===
+ttft=0.722s total=24.557s action=None
+Last question: Should the job track the row count? (yes/no)
+User answer:  no, it's not necessary
+Current (before): {"name": "job_wc_test", "execute_query": true}
+Raw output: {"params": {"name": "job_wc_test", "execute_query": true, "write_count": false}}
+Merged (after):  {"name": "job_wc_test", "execute_query": true, "write_count": false}
+
+=== T041 | OK | result_schema simple ===
+ttft=0.771s total=22.899s action=None
+Last question: Which schema should I write the results to?
+User answer:  ICC_TEST
+Current (before): {"name": "job_full_1", "execute_query": true}
+Raw output: {"params": {"name": "job_full_1", "execute_query": true, "result_schema": "ICC_TEST"}}
+Merged (after):  {"name": "job_full_1", "execute_query": true, "result_schema": "ICC_TEST"}
+
+=== T042 | OK | result_schema lowercased ===
+ttft=0.701s total=12.490s action=None
+Last question: Which schema should I write the results to?
+User answer:  dw
+Current (before): {"name": "job_full_2", "execute_query": true}
+Raw output: {"params": {"name": "job_full_2", "execute_query": true, "result_schema": "dw"}}
+Merged (after):  {"name": "job_full_2", "execute_query": true, "result_schema": "dw"}
+
+=== T043 | OK | table_name simple ===
+ttft=0.734s total=12.162s action=None
+Last question: What table should I write the results to?
+User answer:  test_table
+Current (before): {"name": "job_full_3", "execute_query": true, "result_schema": "ICC_TEST"}
+Raw output: {"params": {"name": "job_full_3", "execute_query": true, "result_schema": "ICC_TEST", "table_name": "test_table"}}
+Merged (after):  {"name": "job_full_3", "execute_query": true, "result_schema": "ICC_TEST", "table_name": "test_table"}
+
+=== T044 | OK | table_name quoted ===
+ttft=0.727s total=17.433s action=None
+Last question: What table should I write the results to?
+User answer:  let's use "RESULT_2025"
+Current (before): {"name": "job_full_4", "execute_query": true, "result_schema": "DW"}
+Raw output: {"params": {"name": "job_full_4", "execute_query": true, "result_schema": "DW", "table_name": "RESULT_2025"}}
+Merged (after):  {"name": "job_full_4", "execute_query": true, "result_schema": "DW", "table_name": "RESULT_2025"}
+
+=== T045 | OK | drop_before_create yes ===
+ttft=0.833s total=19.122s action=None
+Last question: Should I drop the table before creating it? (yes/no)
+User answer:  yes, drop it first
+Current (before): {"name": "job_full_5", "execute_query": true}
+Raw output: {"params": {"name": "job_full_5", "drop_before_create": true}}
+Merged (after):  {"name": "job_full_5", "execute_query": true, "drop_before_create": true}
+
+=== T046 | OK | drop_before_create no ===
+ttft=0.777s total=18.270s action=None
+Last question: Should I drop the table before creating it? (yes/no)
+User answer:  no, do not drop it
+Current (before): {"name": "job_full_6", "execute_query": true}
+Raw output: {"params": {"name": "job_full_6", "execute_query": true, "drop_before_create": false}}
+Merged (after):  {"name": "job_full_6", "execute_query": true, "drop_before_create": false}
+
+=== T047 | OK | write_count_connection ===
+ttft=0.785s total=9.713s action=None
+Last question: What is the connection string for the row count?
+User answer:  ORACLE_10
+Current (before): {"name": "job_full_7", "write_count": true}
+Raw output: {"params": {"name": "job_full_7", "write_count": true, "write_count_connection": "ORACLE_10"}}
+Merged (after):  {"name": "job_full_7", "write_count": true, "write_count_connection": "ORACLE_10"}
+
+=== T048 | OK | write_count_schema ===
+ttft=0.784s total=18.434s action=None
+Last question: What is the schema name for the row count?
+User answer:  ICC_TEST
+Current (before): {"name": "job_full_8", "write_count": true, "write_count_connection": "ORACLE_10"}
+Raw output: {"params": {"name": "job_full_8", "write_count": true, "write_count_schema": "ICC_TEST", "write_count_connection": "ORACLE_10"}}
+Merged (after):  {"name": "job_full_8", "write_count": true, "write_count_connection": "ORACLE_10", "write_count_schema": "ICC_TEST"}
+
+=== T049 | OK | write_count_table ===
+ttft=0.809s total=18.169s action=None
+Last question: What is the table name to store the row count?
+User answer:  ROWCOUNT_T
+Current (before): {"name": "job_full_9", "write_count": true, "write_count_connection": "ORACLE_10", "write_count_schema": "ICC_TEST"}
+Raw output: {"params": {"write_count_table": "ROWCOUNT_T"}}
+Merged (after):  {"name": "job_full_9", "write_count": true, "write_count_connection": "ORACLE_10", "write_count_schema": "ICC_TEST", "write_count_table": "ROWCOUNT_T"}
+
+
+================================================================================
+GLOBAL SUMMARY
+================================================================================
+Model: qwen3:1.7b
+Total tests: 49
+Success: 48
+Fail: 1
+Parse errors: 0
+Type-name bugs: 0
+Overwrite bugs: 0
+Other errors: 0
+Average TTFT: 0.718s
+Average total time per test: 14.845s
+Overall expected-update accuracy: 48/49 (98.0%)

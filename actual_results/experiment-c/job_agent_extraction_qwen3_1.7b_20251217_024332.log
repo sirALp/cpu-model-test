@@ -1,0 +1,77 @@
+JOB_AGENT SINGLE-STEP EXTRACTION BENCHMARK LOG
+Model: qwen3:1.7b
+Total tests: 7
+Timestamp: 2025-12-17T02:43:32.575581
+================================================================================
+
+=== C01 | FAIL | read_sql init: empty last question/answer ===
+ttft=2.763s total=56.978s action=None
+Last question: 
+User answer:  
+Current (before): {}
+Raw output: <<PARSE ERROR: Empty response from model>>\nRAW:
+Merged (after):  {}
+
+=== C02 | OK | read_sql: name from "name it read778900, no saving to db" ===
+ttft=0.720s total=17.307s action=None
+Last question: What should I name this read_sql job?
+User answer:  name it read778900, no saving to db
+Current (before): {"name": "", "execute_query": "", "write_count": ""}
+Raw output: {"params": {"name": "read778900"}}
+Merged (after):  {"name": "read778900", "execute_query": "", "write_count": ""}
+
+=== C03 | OK | write_data: name plain ===
+ttft=1.002s total=20.998s action=None
+Last question: What should I name this write_data job?
+User answer:  write75684
+Current (before): {}
+Raw output: {"params": {"name": "write75684"}}
+Merged (after):  {"name": "write75684"}
+
+=== C04 | OK | write_data: table_name from plain identifier ===
+ttft=0.720s total=13.742s action=None
+Last question: What table should I write the data to?
+User answer:  test_table
+Current (before): {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST"}
+Raw output: {"params": {"name": "write75684", "table": "test_table", "schemas": "ICC_TEST", "connection": "ORACLE_10"}}
+Merged (after):  {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table"}
+
+=== C05 | OK | write_data: drop_or_truncate=none ===
+ttft=0.757s total=20.029s action=None
+Last question: Should I 'drop' (remove and recreate), 'truncate' (clear data), or 'none' (append)?
+User answer:  none
+Current (before): {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table"}
+Raw output: {"params": {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": "none"}}
+Merged (after):  {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": "none"}
+
+=== C06 | OK | email job: name plain ===
+ttft=0.863s total=12.486s action=None
+Last question: What should I name this email job?
+User answer:  email4857489
+Current (before): {}
+Raw output: {"params": {"name": "email4857489"}}
+Merged (after):  {"name": "email4857489"}
+
+=== C07 | OK | email job: extract only 'to' from rich answer (no extra params yet) ===
+ttft=0.752s total=20.550s action=None
+Last question: Who should I send the email to?
+User answer:  Send the text “You can check the data” with the subject “Data Info” to selcan.yukcu@pia-team.com
+Current (before): {"name": "email4857489"}
+Raw output: {"params": {"name": "email4857489", "to": "selcan.yukcu@pia-team.com"}}
+Merged (after):  {"name": "email4857489", "to": "selcan.yukcu@pia-team.com"}
+
+
+================================================================================
+GLOBAL SUMMARY
+================================================================================
+Model: qwen3:1.7b
+Total tests: 7
+Success: 6
+Fail: 1
+Parse errors: 1
+Type-name bugs: 0
+Overwrite bugs: 0
+Other errors: 0
+Average TTFT: 1.082s
+Average total time per test: 23.156s
+Overall expected-update accuracy: 6/6 (100.0%)

@@ -1,0 +1,743 @@
+JOB_AGENT UNIFIED SINGLE-STEP EXTRACTION BENCHMARK LOG
+Model: qwen3:1.7b
+Total tests: 72
+Timestamp: 2025-12-17T15:55:21.972905
+================================================================================
+
+=== T001 | FAIL | read_sql: name plain (read1172) ===
+ttft=4.543s total=26.955s
+Last question: What should I name this read_sql job?
+User answer:  read1172
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: <<PARSE ERROR: Unterminated string starting at: line 1 column 19 (char 18)>>\nRAW: {"params":{"name":"read117
+Merged (after):  {"name": "", "execute_query": null, "write_count": null}
+Expected updates: {"name": "read1172"}
+Bugs: parse=True err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T002 | OK | read_sql: name plain (job133) ===
+ttft=0.565s total=12.468s
+Last question: What should I name this read_sql job?
+User answer:  job133
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"job133"}}
+Merged (after):  {"name": "job133", "execute_query": null, "write_count": null}
+Expected updates: {"name": "job133"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T003 | OK | read_sql: name plain (daily_orders) ===
+ttft=0.496s total=14.995s
+Last question: What should I name this read_sql job?
+User answer:  daily_orders
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"daily_orders","execute_query":false}}
+Merged (after):  {"name": "daily_orders", "execute_query": false, "write_count": null}
+Expected updates: {"name": "daily_orders"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T004 | OK | read_sql: name plain (report_balances) ===
+ttft=0.560s total=16.431s
+Last question: What should I name this read_sql job?
+User answer:  report_balances
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"report_balances","execute_query":false}}
+Merged (after):  {"name": "report_balances", "execute_query": false, "write_count": null}
+Expected updates: {"name": "report_balances"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T005 | OK | read_sql: name plain (rowsync) ===
+ttft=0.506s total=16.477s
+Last question: What should I name this read_sql job?
+User answer:  rowsync
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"rowsync","execute_query":false}}
+Merged (after):  {"name": "rowsync", "execute_query": false, "write_count": null}
+Expected updates: {"name": "rowsync"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T006 | FAIL | read_sql: name plain (customer_audit) ===
+ttft=0.489s total=23.355s
+Last question: What should I name this read_sql job?
+User answer:  customer_audit
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: <<PARSE ERROR: Unterminated string starting at: line 1 column 36 (char 35)>>\nRAW: {"params":{"name":"customer_audit","execute_query
+Merged (after):  {"name": "", "execute_query": null, "write_count": null}
+Expected updates: {"name": "customer_audit"}
+Bugs: parse=True err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T007 | OK | read_sql: name + no saving => execute_query=false ===
+ttft=0.580s total=18.363s
+Last question: What should I name this read_sql job?
+User answer:  name it read778900, no saving to db
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"read778900","execute_query":false}}
+Merged (after):  {"name": "read778900", "execute_query": false, "write_count": null}
+Expected updates: {"name": "read778900", "execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T008 | FAIL | read_sql: name + no saving => execute_query=false ===
+ttft=0.581s total=17.802s
+Last question: What should I name this read_sql job?
+User answer:  name it read9001, no saving to db
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"read9001","write_count":false}}
+Merged (after):  {"name": "read9001", "execute_query": null, "write_count": false}
+Expected updates: {"name": "read9001", "execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T009 | FAIL | read_sql: name + no saving => execute_query=false ===
+ttft=0.565s total=16.568s
+Last question: What should I name this read_sql job?
+User answer:  name it read_daily, no saving to db
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"read_daily","execute_query":null,"write_count":false}}
+Merged (after):  {"name": "read_daily", "execute_query": null, "write_count": false}
+Expected updates: {"name": "read_daily", "execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T010 | OK | read_sql: name + no saving => execute_query=false ===
+ttft=0.564s total=14.219s
+Last question: What should I name this read_sql job?
+User answer:  name it read_clicks, no saving to db
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"read_clicks","execute_query":false,"write_count":false}}
+Merged (after):  {"name": "read_clicks", "execute_query": false, "write_count": false}
+Expected updates: {"name": "read_clicks", "execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T011 | OK | read_sql: name + no saving => execute_query=false ===
+ttft=0.565s total=13.665s
+Last question: What should I name this read_sql job?
+User answer:  name it read_orders, no saving to db
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"read_orders","execute_query":false}}
+Merged (after):  {"name": "read_orders", "execute_query": false, "write_count": null}
+Expected updates: {"name": "read_orders", "execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T012 | OK | read_sql: name + no saving => execute_query=false ===
+ttft=0.565s total=17.339s
+Last question: What should I name this read_sql job?
+User answer:  name it read_user_audit, no saving to db
+Current (before): {"name": "", "execute_query": null, "write_count": null}
+Raw output: {"params":{"name":"read_user_audit","execute_query":false,"write_count":null}}
+Merged (after):  {"name": "read_user_audit", "execute_query": false, "write_count": null}
+Expected updates: {"name": "read_user_audit", "execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T013 | OK | read_sql: execute_query=false (no) ===
+ttft=0.618s total=20.423s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no
+Current (before): {"name": "job_exec_test", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false, "write_count": null}
+Expected updates: {"execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T014 | OK | read_sql: execute_query=false (nope, preview only) ===
+ttft=0.574s total=15.161s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  nope, preview only
+Current (before): {"name": "job_exec_test", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false,"write_count":false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false, "write_count": false}
+Expected updates: {"execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T015 | FAIL | read_sql: execute_query=false (no, don't save) ===
+ttft=0.563s total=17.053s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no, don't save
+Current (before): {"name": "job_exec_test", "execute_query": null, "write_count": null}
+Raw output: {"params":{"write_count":false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": null, "write_count": false}
+Expected updates: {"execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T016 | OK | read_sql: execute_query=false (do not save to db) ===
+ttft=0.569s total=16.395s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  do not save to db
+Current (before): {"name": "job_exec_test", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false, "write_count": null}
+Expected updates: {"execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T017 | OK | read_sql: execute_query=false (no saving please) ===
+ttft=0.574s total=15.692s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no saving please
+Current (before): {"name": "job_exec_test", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false, "write_count": null}
+Expected updates: {"execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T018 | OK | read_sql: execute_query=false (nah, just preview) ===
+ttft=0.564s total=13.422s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  nah, just preview
+Current (before): {"name": "job_exec_test", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false,"write_count":false}}
+Merged (after):  {"name": "job_exec_test", "execute_query": false, "write_count": false}
+Expected updates: {"execute_query": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T019 | FAIL | read_sql: execute_query + write_count in one answer ===
+ttft=0.570s total=37.969s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no saving; yes track row count
+Current (before): {"name": "job_mix", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":true,"write_count":false}}
+Merged (after):  {"name": "job_mix", "execute_query": true, "write_count": false}
+Expected updates: {"execute_query": false, "write_count": true}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T020 | FAIL | read_sql: execute_query + write_count in one answer ===
+ttft=0.615s total=17.855s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no, but please track row count
+Current (before): {"name": "job_mix", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false,"write_count":false}}
+Merged (after):  {"name": "job_mix", "execute_query": false, "write_count": false}
+Expected updates: {"execute_query": false, "write_count": true}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T021 | FAIL | read_sql: execute_query + write_count in one answer ===
+ttft=0.607s total=46.552s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no saving and no row count
+Current (before): {"name": "job_mix", "execute_query": null, "write_count": null}
+Raw output: <<PARSE ERROR: Empty response from model>>\nRAW:
+Merged (after):  {"name": "job_mix", "execute_query": null, "write_count": null}
+Expected updates: {"execute_query": false, "write_count": false}
+Bugs: parse=True err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T022 | OK | read_sql: execute_query + write_count in one answer ===
+ttft=0.567s total=12.986s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  preview only; don't track row count
+Current (before): {"name": "job_mix", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false,"write_count":false}}
+Merged (after):  {"name": "job_mix", "execute_query": false, "write_count": false}
+Expected updates: {"execute_query": false, "write_count": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T023 | FAIL | read_sql: execute_query + write_count in one answer ===
+ttft=0.579s total=15.956s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  do not save; keep the row count
+Current (before): {"name": "job_mix", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false,"write_count":false}}
+Merged (after):  {"name": "job_mix", "execute_query": false, "write_count": false}
+Expected updates: {"execute_query": false, "write_count": true}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T024 | OK | read_sql: execute_query + write_count in one answer ===
+ttft=0.697s total=13.984s
+Last question: Should the job execute the query and save results to the database? (yes/no)
+User answer:  no need to save; row count not necessary
+Current (before): {"name": "job_mix", "execute_query": null, "write_count": null}
+Raw output: {"params":{"execute_query":false,"write_count":false}}
+Merged (after):  {"name": "job_mix", "execute_query": false, "write_count": false}
+Expected updates: {"execute_query": false, "write_count": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T025 | OK | read_sql: write_count boolean ===
+ttft=0.695s total=18.023s
+Last question: Should the job track the row count? (yes/no)
+User answer:  yes, track it
+Current (before): {"name": "job_wc", "execute_query": false, "write_count": null}
+Raw output: {"params":{"write_count":true}}
+Merged (after):  {"name": "job_wc", "execute_query": false, "write_count": true}
+Expected updates: {"write_count": true}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T026 | OK | read_sql: write_count boolean ===
+ttft=0.585s total=15.049s
+Last question: Should the job track the row count? (yes/no)
+User answer:  sure, count rows
+Current (before): {"name": "job_wc", "execute_query": false, "write_count": null}
+Raw output: {"params":{"write_count":true}}
+Merged (after):  {"name": "job_wc", "execute_query": false, "write_count": true}
+Expected updates: {"write_count": true}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T027 | OK | read_sql: write_count boolean ===
+ttft=0.647s total=13.199s
+Last question: Should the job track the row count? (yes/no)
+User answer:  no, don't track it
+Current (before): {"name": "job_wc", "execute_query": false, "write_count": null}
+Raw output: {"params":{"write_count":false}}
+Merged (after):  {"name": "job_wc", "execute_query": false, "write_count": false}
+Expected updates: {"write_count": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T028 | OK | read_sql: write_count boolean ===
+ttft=0.627s total=16.599s
+Last question: Should the job track the row count? (yes/no)
+User answer:  nope, skip row count
+Current (before): {"name": "job_wc", "execute_query": false, "write_count": null}
+Raw output: {"params":{"write_count":false}}
+Merged (after):  {"name": "job_wc", "execute_query": false, "write_count": false}
+Expected updates: {"write_count": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T029 | OK | read_sql: write_count boolean ===
+ttft=0.559s total=37.633s
+Last question: Should the job track the row count? (yes/no)
+User answer:  not necessary
+Current (before): {"name": "job_wc", "execute_query": false, "write_count": null}
+Raw output: {"params":{"write_count":false}}
+Merged (after):  {"name": "job_wc", "execute_query": false, "write_count": false}
+Expected updates: {"write_count": false}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T030 | OK | read_sql: write_count boolean ===
+ttft=0.617s total=15.174s
+Last question: Should the job track the row count? (yes/no)
+User answer:  please track rows
+Current (before): {"name": "job_wc", "execute_query": false, "write_count": null}
+Raw output: {"params":{"write_count":true}}
+Merged (after):  {"name": "job_wc", "execute_query": false, "write_count": true}
+Expected updates: {"write_count": true}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T031 | OK | write_data: name ===
+ttft=0.795s total=13.689s
+Last question: What should I name this write_data job?
+User answer:  write75684
+Current (before): {"name": "", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"name":"write75684"}}
+Merged (after):  {"name": "write75684", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Expected updates: {"name": "write75684"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T032 | OK | write_data: name ===
+ttft=0.558s total=15.327s
+Last question: What should I name this write_data job?
+User answer:  write_daily
+Current (before): {"name": "", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"name":"write_daily"}}
+Merged (after):  {"name": "write_daily", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Expected updates: {"name": "write_daily"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T033 | OK | write_data: name ===
+ttft=0.576s total=10.044s
+Last question: What should I name this write_data job?
+User answer:  write_clicks
+Current (before): {"name": "", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"name":"write_clicks"}}
+Merged (after):  {"name": "write_clicks", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Expected updates: {"name": "write_clicks"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T034 | OK | write_data: multi-fill table/schema/connection ===
+ttft=0.642s total=13.671s
+Last question: What table should I write the data to?
+User answer:  write to test_table, schema ICC_TEST, connection ORACLE_10
+Current (before): {"name": "write_job", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"test_table","schemas":"ICC_TEST","connection":"ORACLE_10","drop_or_truncate":""}}
+Merged (after):  {"name": "write_job", "table": "test_table", "schemas": "ICC_TEST", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"table": "test_table", "schemas": "ICC_TEST", "connection": "ORACLE_10"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T035 | OK | write_data: multi-fill table/schema/connection ===
+ttft=0.687s total=11.436s
+Last question: What table should I write the data to?
+User answer:  table test_table schema ICC_TEST conn ORACLE_10
+Current (before): {"name": "write_job", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"name":"write_job","table":"test_table","schemas":"ICC_TEST","connection":"ORACLE_10","drop_or_truncate":""}}
+Merged (after):  {"name": "write_job", "table": "test_table", "schemas": "ICC_TEST", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"table": "test_table", "schemas": "ICC_TEST", "connection": "ORACLE_10"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T036 | OK | write_data: multi-fill table/schema/connection ===
+ttft=0.674s total=20.566s
+Last question: What table should I write the data to?
+User answer:  use "orders_2025" schema DW connection ORACLE_10
+Current (before): {"name": "write_job", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"orders_2025","schemas":"DW","connection":"ORACLE_10"}}
+Merged (after):  {"name": "write_job", "table": "orders_2025", "schemas": "DW", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"table": "orders_2025", "schemas": "DW", "connection": "ORACLE_10"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T037 | FAIL | write_data: multi-fill table/schema/connection ===
+ttft=0.666s total=23.287s
+Last question: What table should I write the data to?
+User answer:  test_table on ORACLE_10 in schema ICC_TEST
+Current (before): {"name": "write_job", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: <<PARSE ERROR: Unterminated string starting at: line 1 column 67 (char 66)>>\nRAW: {"params":{"table":"test_table","schemas":"ICC_TEST","connection":"ORACLE_10
+Merged (after):  {"name": "write_job", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Expected updates: {"table": "test_table", "schemas": "ICC_TEST", "connection": "ORACLE_10"}
+Bugs: parse=True err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T038 | OK | write_data: multi-fill table/schema/connection ===
+ttft=0.561s total=14.781s
+Last question: What table should I write the data to?
+User answer:  write to clicks_agg, schema ICC_TEST
+Current (before): {"name": "write_job", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"clicks_agg","schemas":"ICC_TEST"}}
+Merged (after):  {"name": "write_job", "table": "clicks_agg", "schemas": "ICC_TEST", "connection": "", "drop_or_truncate": ""}
+Expected updates: {"table": "clicks_agg", "schemas": "ICC_TEST"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T039 | OK | write_data: multi-fill table/schema/connection ===
+ttft=0.563s total=11.564s
+Last question: What table should I write the data to?
+User answer:  table=customer_audit schema=DW
+Current (before): {"name": "write_job", "table": "", "schemas": "", "connection": "", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"customer_audit","schemas":"DW"}}
+Merged (after):  {"name": "write_job", "table": "customer_audit", "schemas": "DW", "connection": "", "drop_or_truncate": ""}
+Expected updates: {"table": "customer_audit", "schemas": "DW"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T040 | FAIL | write_data: schema.table dot split ===
+ttft=0.572s total=13.139s
+Last question: What table should I write the data to?
+User answer:  ICC_TEST.test_table
+Current (before): {"name": "write_dot", "table": "", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"test_table"}}
+Merged (after):  {"name": "write_dot", "table": "test_table", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"schemas": "ICC_TEST", "table": "test_table"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T041 | FAIL | write_data: schema.table dot split ===
+ttft=0.597s total=15.121s
+Last question: What table should I write the data to?
+User answer:  DW.orders_2025
+Current (before): {"name": "write_dot", "table": "", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"DW.orders_2025","schemas":"DW"}}
+Merged (after):  {"name": "write_dot", "table": "DW.orders_2025", "schemas": "DW", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"schemas": "DW", "table": "orders_2025"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T042 | FAIL | write_data: schema.table dot split ===
+ttft=0.594s total=45.342s
+Last question: What table should I write the data to?
+User answer:  ICC_TEST.clicks_agg
+Current (before): {"name": "write_dot", "table": "", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"ICC_TEST.clicks_agg","schemas":"ICC_TEST","drop_or_truncate":""}}
+Merged (after):  {"name": "write_dot", "table": "ICC_TEST.clicks_agg", "schemas": "ICC_TEST", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"schemas": "ICC_TEST", "table": "clicks_agg"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T043 | FAIL | write_data: schema.table dot split ===
+ttft=0.559s total=16.996s
+Last question: What table should I write the data to?
+User answer:  DW.customer_audit
+Current (before): {"name": "write_dot", "table": "", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"DW.customer_audit","schemas":"DW"}}
+Merged (after):  {"name": "write_dot", "table": "DW.customer_audit", "schemas": "DW", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"schemas": "DW", "table": "customer_audit"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T044 | FAIL | write_data: schema.table dot split ===
+ttft=0.610s total=11.062s
+Last question: What table should I write the data to?
+User answer:  ICC_TEST.sales_daily
+Current (before): {"name": "write_dot", "table": "", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"ICC_TEST.sales_daily","schemas":"ICC_TEST"}}
+Merged (after):  {"name": "write_dot", "table": "ICC_TEST.sales_daily", "schemas": "ICC_TEST", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"schemas": "ICC_TEST", "table": "sales_daily"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T045 | FAIL | write_data: schema.table dot split ===
+ttft=0.602s total=37.437s
+Last question: What table should I write the data to?
+User answer:  DW.report_balances
+Current (before): {"name": "write_dot", "table": "", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Raw output: {"params":{"table":"DW.report_balances"}}
+Merged (after):  {"name": "write_dot", "table": "DW.report_balances", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": ""}
+Expected updates: {"schemas": "DW", "table": "report_balances"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T046 | OK | write_data: drop_or_truncate ===
+ttft=0.695s total=17.967s
+Last question: Should I 'drop' (remove and recreate), 'truncate' (clear data), or 'none' (append)?
+User answer:  none, keep appending
+Current (before): {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": ""}
+Raw output: {"params":{"name":"write75684","table":"test_table","schemas":"ICC_TEST","connection":"ORACLE_10","drop_or_truncate":"none"}}
+Merged (after):  {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": "none"}
+Expected updates: {"drop_or_truncate": "none"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T047 | OK | write_data: drop_or_truncate ===
+ttft=0.629s total=9.787s
+Last question: Should I 'drop' (remove and recreate), 'truncate' (clear data), or 'none' (append)?
+User answer:  truncate it
+Current (before): {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": ""}
+Raw output: {"params":{"drop_or_truncate":"truncate"}}
+Merged (after):  {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": "truncate"}
+Expected updates: {"drop_or_truncate": "truncate"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T048 | OK | write_data: drop_or_truncate ===
+ttft=0.567s total=8.479s
+Last question: Should I 'drop' (remove and recreate), 'truncate' (clear data), or 'none' (append)?
+User answer:  drop
+Current (before): {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": ""}
+Raw output: {"params":{"drop_or_truncate":"drop"}}
+Merged (after):  {"name": "write75684", "connection": "ORACLE_10", "schemas": "ICC_TEST", "table": "test_table", "drop_or_truncate": "drop"}
+Expected updates: {"drop_or_truncate": "drop"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T049 | FAIL | write_data: connection (+ optional schema) ===
+ttft=0.636s total=20.939s
+Last question: Which connection should I use for writing?
+User answer:  use ORACLE_10 schema ICC_TEST
+Current (before): {"name": "write_conn", "table": "test_table", "schemas": "", "connection": "", "drop_or_truncate": "none"}
+Raw output: {"params":{"schemas":"ORACLE_10","connection":"ORACLE_10"}}
+Merged (after):  {"name": "write_conn", "table": "test_table", "schemas": "ORACLE_10", "connection": "ORACLE_10", "drop_or_truncate": "none"}
+Expected updates: {"connection": "ORACLE_10", "schemas": "ICC_TEST"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T050 | OK | write_data: connection (+ optional schema) ===
+ttft=0.594s total=10.939s
+Last question: Which connection should I use for writing?
+User answer:  connection ORACLE_10
+Current (before): {"name": "write_conn", "table": "test_table", "schemas": "", "connection": "", "drop_or_truncate": "none"}
+Raw output: {"params":{"connection":"ORACLE_10"}}
+Merged (after):  {"name": "write_conn", "table": "test_table", "schemas": "", "connection": "ORACLE_10", "drop_or_truncate": "none"}
+Expected updates: {"connection": "ORACLE_10"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T051 | OK | write_data: connection (+ optional schema) ===
+ttft=0.587s total=12.382s
+Last question: Which connection should I use for writing?
+User answer:  ORACLE_10 in schema DW
+Current (before): {"name": "write_conn", "table": "test_table", "schemas": "", "connection": "", "drop_or_truncate": "none"}
+Raw output: {"params":{"schemas":"DW","connection":"ORACLE_10"}}
+Merged (after):  {"name": "write_conn", "table": "test_table", "schemas": "DW", "connection": "ORACLE_10", "drop_or_truncate": "none"}
+Expected updates: {"connection": "ORACLE_10", "schemas": "DW"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T052 | OK | email: name ===
+ttft=0.744s total=9.601s
+Last question: What should I name this email job?
+User answer:  email4857489
+Current (before): {"name": "", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"name":"email4857489"}}
+Merged (after):  {"name": "email4857489", "to": "", "subject": "", "text": "", "cc": ""}
+Expected updates: {"name": "email4857489"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T053 | OK | email: name ===
+ttft=0.555s total=9.266s
+Last question: What should I name this email job?
+User answer:  email_daily
+Current (before): {"name": "", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"name":"email_daily"}}
+Merged (after):  {"name": "email_daily", "to": "", "subject": "", "text": "", "cc": ""}
+Expected updates: {"name": "email_daily"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T054 | FAIL | email: name ===
+ttft=0.499s total=11.194s
+Last question: What should I name this email job?
+User answer:  email_report
+Current (before): {"name": "", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params": {"name": "", "to": "", "subject": "", "text": "", "cc": ""}}
+Merged (after):  {"name": "", "to": "", "subject": "", "text": "", "cc": ""}
+Expected updates: {"name": "email_report"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T055 | OK | email: to only ===
+ttft=0.637s total=11.914s
+Last question: Who should I send the email to?
+User answer:  send to selcan.yukcu@pia-team.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"selcan.yukcu@pia-team.com"}}
+Merged (after):  {"name": "email_job", "to": "selcan.yukcu@pia-team.com", "subject": "", "text": "", "cc": ""}
+Expected updates: {"to": "selcan.yukcu@pia-team.com"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T056 | OK | email: to only ===
+ttft=0.557s total=11.771s
+Last question: Who should I send the email to?
+User answer:  send to alp@example.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"alp@example.com"}}
+Merged (after):  {"name": "email_job", "to": "alp@example.com", "subject": "", "text": "", "cc": ""}
+Expected updates: {"to": "alp@example.com"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T057 | OK | email: to only ===
+ttft=0.558s total=10.617s
+Last question: Who should I send the email to?
+User answer:  send to ops@company.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"ops@company.com"}}
+Merged (after):  {"name": "email_job", "to": "ops@company.com", "subject": "", "text": "", "cc": ""}
+Expected updates: {"to": "ops@company.com"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T058 | OK | email: to only ===
+ttft=0.602s total=13.371s
+Last question: Who should I send the email to?
+User answer:  send to finance@company.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"name":"email_job","to":"finance@company.com"}}
+Merged (after):  {"name": "email_job", "to": "finance@company.com", "subject": "", "text": "", "cc": ""}
+Expected updates: {"to": "finance@company.com"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T059 | OK | email: to only ===
+ttft=0.598s total=10.695s
+Last question: Who should I send the email to?
+User answer:  send to team.lead@company.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"team.lead@company.com"}}
+Merged (after):  {"name": "email_job", "to": "team.lead@company.com", "subject": "", "text": "", "cc": ""}
+Expected updates: {"to": "team.lead@company.com"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T060 | OK | email: to only ===
+ttft=0.594s total=12.290s
+Last question: Who should I send the email to?
+User answer:  send to data@company.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"data@company.com"}}
+Merged (after):  {"name": "email_job", "to": "data@company.com", "subject": "", "text": "", "cc": ""}
+Expected updates: {"to": "data@company.com"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T061 | OK | email: to + subject + text ===
+ttft=0.697s total=14.396s
+Last question: Who should I send the email to?
+User answer:  Send the text "You can check the data" with the subject "Data Info" to selcan.yukcu@pia-team.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"selcan.yukcu@pia-team.com","subject":"Data Info","text":"You can check the data"}}
+Merged (after):  {"name": "email_job", "to": "selcan.yukcu@pia-team.com", "subject": "Data Info", "text": "You can check the data", "cc": ""}
+Expected updates: {"to": "selcan.yukcu@pia-team.com", "subject": "Data Info", "text": "You can check the data"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T062 | OK | email: to + subject + text ===
+ttft=0.566s total=10.858s
+Last question: Who should I send the email to?
+User answer:  to ops@company.com subject "Alert" text "Pipeline failed"
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"ops@company.com","subject":"Alert","text":"Pipeline failed"}}
+Merged (after):  {"name": "email_job", "to": "ops@company.com", "subject": "Alert", "text": "Pipeline failed", "cc": ""}
+Expected updates: {"to": "ops@company.com", "subject": "Alert", "text": "Pipeline failed"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T063 | OK | email: to + subject + text ===
+ttft=0.572s total=14.756s
+Last question: Who should I send the email to?
+User answer:  subject "Daily Report" text "Attached" to finance@company.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"finance@company.com","subject":"Daily Report","text":"Attached"}}
+Merged (after):  {"name": "email_job", "to": "finance@company.com", "subject": "Daily Report", "text": "Attached", "cc": ""}
+Expected updates: {"to": "finance@company.com", "subject": "Daily Report", "text": "Attached"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T064 | OK | email: to + subject + text ===
+ttft=0.561s total=21.211s
+Last question: Who should I send the email to?
+User answer:  send "Hello" with subject "Ping" to team.lead@company.com
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"team.lead@company.com","subject":"Ping","text":"Hello"}}
+Merged (after):  {"name": "email_job", "to": "team.lead@company.com", "subject": "Ping", "text": "Hello", "cc": ""}
+Expected updates: {"to": "team.lead@company.com", "subject": "Ping", "text": "Hello"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T065 | OK | email: to + subject + text ===
+ttft=0.602s total=21.797s
+Last question: Who should I send the email to?
+User answer:  to data@company.com subject "ETL" text "Done"
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"data@company.com","subject":"ETL","text":"Done"}}
+Merged (after):  {"name": "email_job", "to": "data@company.com", "subject": "ETL", "text": "Done", "cc": ""}
+Expected updates: {"to": "data@company.com", "subject": "ETL", "text": "Done"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T066 | OK | email: to + subject + text ===
+ttft=0.598s total=37.765s
+Last question: Who should I send the email to?
+User answer:  send to alp@example.com subject "Test" text "OK"
+Current (before): {"name": "email_job", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"alp@example.com","subject":"Test","text":"OK"}}
+Merged (after):  {"name": "email_job", "to": "alp@example.com", "subject": "Test", "text": "OK", "cc": ""}
+Expected updates: {"to": "alp@example.com", "subject": "Test", "text": "OK"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T067 | OK | email: to + cc + subject + text ===
+ttft=0.648s total=12.671s
+Last question: Who should I send the email to?
+User answer:  to selcan.yukcu@pia-team.com cc alp@example.com subject "Data Info" text "You can check the data"
+Current (before): {"name": "email_cc", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"selcan.yukcu@pia-team.com","subject":"Data Info","text":"You can check the data","cc":"alp@example.com"}}
+Merged (after):  {"name": "email_cc", "to": "selcan.yukcu@pia-team.com", "subject": "Data Info", "text": "You can check the data", "cc": "alp@example.com"}
+Expected updates: {"to": "selcan.yukcu@pia-team.com", "cc": "alp@example.com", "subject": "Data Info", "text": "You can check the data"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T068 | OK | email: to + cc + subject + text ===
+ttft=0.638s total=14.512s
+Last question: Who should I send the email to?
+User answer:  send to ops@company.com cc oncall@company.com subject "Alert" text "Pipeline failed"
+Current (before): {"name": "email_cc", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"ops@company.com","subject":"Alert","text":"Pipeline failed","cc":"oncall@company.com"}}
+Merged (after):  {"name": "email_cc", "to": "ops@company.com", "subject": "Alert", "text": "Pipeline failed", "cc": "oncall@company.com"}
+Expected updates: {"to": "ops@company.com", "cc": "oncall@company.com", "subject": "Alert", "text": "Pipeline failed"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T069 | OK | email: to + cc + subject + text ===
+ttft=0.688s total=13.166s
+Last question: Who should I send the email to?
+User answer:  to finance@company.com cc ceo@company.com subject "Daily" text "Report is ready"
+Current (before): {"name": "email_cc", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"finance@company.com","subject":"Daily","text":"Report is ready","cc":"ceo@company.com"}}
+Merged (after):  {"name": "email_cc", "to": "finance@company.com", "subject": "Daily", "text": "Report is ready", "cc": "ceo@company.com"}
+Expected updates: {"to": "finance@company.com", "cc": "ceo@company.com", "subject": "Daily", "text": "Report is ready"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T070 | OK | email: to + cc + subject + text ===
+ttft=0.680s total=21.632s
+Last question: Who should I send the email to?
+User answer:  cc boss@company.com to team.lead@company.com subject "Ping" text "Hi"
+Current (before): {"name": "email_cc", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"team.lead@company.com","subject":"Ping","text":"Hi","cc":"boss@company.com"}}
+Merged (after):  {"name": "email_cc", "to": "team.lead@company.com", "subject": "Ping", "text": "Hi", "cc": "boss@company.com"}
+Expected updates: {"to": "team.lead@company.com", "cc": "boss@company.com", "subject": "Ping", "text": "Hi"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T071 | OK | email: to + cc + subject + text ===
+ttft=0.688s total=14.290s
+Last question: Who should I send the email to?
+User answer:  to data@company.com cc qa@company.com subject "ETL" text "Done"
+Current (before): {"name": "email_cc", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"data@company.com","subject":"ETL","text":"Done","cc":"qa@company.com"}}
+Merged (after):  {"name": "email_cc", "to": "data@company.com", "subject": "ETL", "text": "Done", "cc": "qa@company.com"}
+Expected updates: {"to": "data@company.com", "cc": "qa@company.com", "subject": "ETL", "text": "Done"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+=== T072 | OK | email: to + cc + subject + text ===
+ttft=0.677s total=14.044s
+Last question: Who should I send the email to?
+User answer:  to alp@example.com cc selcan.yukcu@pia-team.com subject "Test" text "OK"
+Current (before): {"name": "email_cc", "to": "", "subject": "", "text": "", "cc": ""}
+Raw output: {"params":{"to":"alp@example.com","subject":"Test","text":"OK","cc":"selcan.yukcu@pia-team.com"}}
+Merged (after):  {"name": "email_cc", "to": "alp@example.com", "subject": "Test", "text": "OK", "cc": "selcan.yukcu@pia-team.com"}
+Expected updates: {"to": "alp@example.com", "cc": "selcan.yukcu@pia-team.com", "subject": "Test", "text": "OK"}
+Bugs: parse=False err=False type=False invalid_key=False overwrite=False unexpected=False
+
+
+================================================================================
+GLOBAL SUMMARY
+================================================================================
+Model: qwen3:1.7b
+Total tests: 72
+Success: 54
+Fail: 18
+Parse errors: 4
+Errors: 0
+Type-name bugs: 0
+Invalid-key bugs: 0
+Overwrite bugs: 0
+Unexpected-update bugs: 0
+Average TTFT: 0.657s
+Average total time per test: 17.132s
+Overall expected-update accuracy: 109/132 (82.6%)
